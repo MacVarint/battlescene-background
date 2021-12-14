@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "Color Fading": "github:jwunderl/pxt-color#v0.2.1"
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.1",
+        "Sprite Converter": "github:macvarint/sprite-converter#master"
     },
     "files": [
         "main.blocks",
@@ -25,5 +26,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
