@@ -130,10 +130,7 @@ function setupBattleScene () {
     platforms.setPosition(80, 60)
     Cloud_sprite = sprites.create(assets.image`Clouds`, SpriteKind.Background)
     Cloud_sprite.setPosition(80, 60)
-    Envirodant = sprites.create(assets.image`Envirodant`, SpriteKind.Enemy)
-    Envirodant.setPosition(80, 60)
 }
-let Envirodant: Sprite = null
 let Cloud_sprite: Sprite = null
 let platforms: Sprite = null
 let Grasssprite: Sprite = null
