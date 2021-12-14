@@ -129,7 +129,6 @@ function setupBattleScene () {
     Grasssprite.setPosition(80, 60)
     platforms = sprites.create(assets.image`Battle grass2`, SpriteKind.Background)
     platforms.setPosition(80, 60)
-    generateBeaver()
 }
 function generateBeaver () {
     Envirodant = sprites.create(assets.image`Clouds`, SpriteKind.Enemy)
@@ -157,7 +156,7 @@ function generateBeaver () {
         f e e e e f f e e e e e f f f e 
         e e e e f f f e f e e e e f f f 
         e e e e f f f e f e e e e f f f 
-        `, SpriteKind.prop)
+        `, SpriteKind.Enemy)
     envirodentAddition.setPosition(137, 85)
     envirodentAddition2 = sprites.create(img`
         . . . . . b b b b b b . . . . . 
@@ -176,12 +175,16 @@ function generateBeaver () {
         f e e e e f f e e e e e f f f e 
         e e e e f f f e f e e e e f f f 
         e e e e f f f e f e e e e f f f 
-        `, SpriteKind.prop)
+        `, SpriteKind.Enemy)
     envirodentAddition2.setPosition(153, 85)
+}
+function battleSceneBackground_Mac () {
+    setupBattleScene()
+    generateBeaver()
 }
 let envirodentAddition2: Sprite = null
 let envirodentAddition: Sprite = null
 let Envirodant: Sprite = null
 let platforms: Sprite = null
 let Grasssprite: Sprite = null
-setupBattleScene()
+battleSceneBackground_Mac()
