@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const Background = SpriteKind.create()
+}
 function setupBattleScene () {
     scene.setBackgroundImage(img`
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -121,11 +124,14 @@ function setupBattleScene () {
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
         `)
-    Grasssprite = sprites.create(assets.image`Battle grass`, SpriteKind.Player)
+    Grasssprite = sprites.create(assets.image`Battle grass`, SpriteKind.Background)
     Grasssprite.setPosition(80, 60)
-    platforms = sprites.create(assets.image`Battle grass2`, SpriteKind.Player)
+    platforms = sprites.create(assets.image`Battle grass2`, SpriteKind.Background)
     platforms.setPosition(80, 60)
+    Cloud_sprite = sprites.create(assets.image`Clouds`, SpriteKind.Background)
+    Cloud_sprite.setPosition(80, 60)
 }
+let Cloud_sprite: Sprite = null
 let platforms: Sprite = null
 let Grasssprite: Sprite = null
 setupBattleScene()
