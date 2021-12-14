@@ -2,6 +2,10 @@ namespace SpriteKind {
     export const Background = SpriteKind.create()
     export const prop = SpriteKind.create()
 }
+function battleScene_Mac () {
+    setupBattleScene()
+    generateBeaver()
+}
 function setupBattleScene () {
     scene.setBackgroundImage(img`
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -132,7 +136,7 @@ function setupBattleScene () {
 }
 function generateBeaver () {
     Envirodant = sprites.create(assets.image`Clouds`, SpriteKind.Enemy)
-    Envirodant.setPosition(133, 71)
+    Envirodant.setPosition(133, 69)
     animation.runImageAnimation(
     Envirodant,
     assets.animation`Beaver`,
@@ -178,13 +182,9 @@ function generateBeaver () {
         `, SpriteKind.Enemy)
     envirodentAddition2.setPosition(153, 85)
 }
-function battleSceneBackground_Mac () {
-    setupBattleScene()
-    generateBeaver()
-}
 let envirodentAddition2: Sprite = null
 let envirodentAddition: Sprite = null
 let Envirodant: Sprite = null
 let platforms: Sprite = null
 let Grasssprite: Sprite = null
-battleSceneBackground_Mac()
+battleScene_Mac()
