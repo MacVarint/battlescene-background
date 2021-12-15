@@ -7,6 +7,7 @@ function battleScene_Mac () {
     generateCow()
     generateElephant()
     generateBeaver()
+    generateElephant()
 }
 function setupBattleScene () {
     scene.setBackgroundImage(assets.image`Sky`)
@@ -16,12 +17,12 @@ function setupBattleScene () {
     platforms.setPosition(80, 60)
 }
 function generateElephant () {
-    Envirodant = sprites.create(assets.image`ElephantConst`, SpriteKind.Enemy)
-    Envirodant.setPosition(134, 72)
+    Envirodant = sprites.create(assets.image`Goat`, SpriteKind.Enemy)
+    Envirodant.setPosition(138, 72)
     animation.runImageAnimation(
     Envirodant,
-    assets.animation`Elephant`,
-    200,
+    assets.animation`myAnim`,
+    500,
     true
     )
     envirodentAddition = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
@@ -50,6 +51,20 @@ function generateCow () {
     Envirodant,
     assets.animation`Cow`,
     500,
+    true
+    )
+    envirodentAddition = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
+    envirodentAddition.setPosition(137, 85)
+    envirodentAddition2 = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
+    envirodentAddition2.setPosition(153, 85)
+}
+function generateGoat () {
+    Envirodant = sprites.create(assets.image`ElephantConst`, SpriteKind.Enemy)
+    Envirodant.setPosition(134, 72)
+    animation.runImageAnimation(
+    Envirodant,
+    assets.animation`Elephant`,
+    200,
     true
     )
     envirodentAddition = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
