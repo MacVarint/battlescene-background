@@ -4,8 +4,9 @@ namespace SpriteKind {
 }
 function battleScene_Mac () {
     setupBattleScene()
-    generateBeaver()
     generateCow()
+    generateElephant()
+    generateBeaver()
 }
 function setupBattleScene () {
     scene.setBackgroundImage(assets.image`Sky`)
@@ -13,6 +14,20 @@ function setupBattleScene () {
     Grasssprite.setPosition(80, 60)
     platforms = sprites.create(assets.image`Battle grass2`, SpriteKind.Background)
     platforms.setPosition(80, 60)
+}
+function generateElephant () {
+    Envirodant = sprites.create(assets.image`ElephantConst`, SpriteKind.Enemy)
+    Envirodant.setPosition(134, 72)
+    animation.runImageAnimation(
+    Envirodant,
+    assets.animation`Elephant`,
+    200,
+    true
+    )
+    envirodentAddition = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
+    envirodentAddition.setPosition(137, 85)
+    envirodentAddition2 = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
+    envirodentAddition2.setPosition(153, 85)
 }
 function generateBeaver () {
     Envirodant = sprites.create(assets.image`Clouds`, SpriteKind.Enemy)
