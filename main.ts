@@ -72,9 +72,14 @@ function generateGoat () {
     envirodentAddition2 = sprites.create(assets.image`Empty`, SpriteKind.Enemy)
     envirodentAddition2.setPosition(153, 85)
 }
+function logo () {
+    logo_env = sprites.create(assets.image`Logo`, SpriteKind.Player)
+}
+let logo_env: Sprite = null
 let envirodentAddition2: Sprite = null
 let envirodentAddition: Sprite = null
 let Envirodant: Sprite = null
 let platforms: Sprite = null
 let Grasssprite: Sprite = null
 battleScene_Mac()
+logo()
